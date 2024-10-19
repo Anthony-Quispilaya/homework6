@@ -1,8 +1,12 @@
 from app.commands import Command
 from calculator.arithmetic_operations import add
+import os
 
 class AddCommand(Command):
     def execute(self):
+        '''Using os.system(cls,clear) to give the user a fresh screen'''
+        os.system('cls') # Windows
+        os.system('clear') #Linux/MacOS
         
         # User enters two number, (automatically float type)
         try:

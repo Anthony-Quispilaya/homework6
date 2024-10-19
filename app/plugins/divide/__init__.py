@@ -1,9 +1,11 @@
 from app.commands import Command
 from calculator.arithmetic_operations import divide
-
+import os
 class DivideCommand(Command):
     def execute(self):
-        
+        '''Using os.system(cls,clear) to give the user a fresh screen'''
+        os.system('cls') # Windows
+        os.system('clear') #Linux/MacOS
         # User enters two number, (automatically float type)
         try:
             a = float(input("Enter the first number: "))
